@@ -9,15 +9,16 @@
 
 body {
   font-family: 'Inter', sans-serif;
-  background-color: #f8fafc;
+  background-color: #0d1b2a;
   min-height: 100vh;
   display: grid;
   place-items: center;
 }
 
 .app-container {
+  min-width: 1000px;
+  max-width: 70%;
   width: 100%;
-  max-width: 1200px;
   height: 90vh;
   margin: 0 auto;
   padding: 2rem;
@@ -34,14 +35,15 @@ body {
 .app-header h1 {
   font-size: 2.25rem;
   font-weight: 600;
-  color: #1e293b;
+  color: #778da9;
   letter-spacing: -0.5px;
+  font-weight: bold;
 }
 
 .chat-container {
   flex: 1;
   overflow-y: auto;
-  background-color: #fff;
+  background-color: #778da9;
   border-radius: 16px;
   padding: 2rem;
   box-shadow: 0 4px 6px rgba(0,0,0,0.05);
@@ -49,12 +51,13 @@ body {
   flex-direction: column;
   gap: 1.5rem;
   width: 100%;
-  max-width: 1000px;
+  min-height: 550px;
+  min-width: 1000px;
   margin: 0 auto;
 }
 
 .chat-placeholder {
-  color: #64748b;
+  color: #e0e1dd;
   text-align: center;
   padding: 3rem;
   font-size: 1.1rem;
@@ -73,15 +76,16 @@ body {
 }
 
 .chat-bubble.question {
-  background-color: #6366f1;
-  color: white;
+  background-color: #e0e1dd;
+  color: black;
   margin-left: auto;
+  font-weight: bold;
   border-bottom-right-radius: 8px;
 }
 
 .chat-bubble.answer {
-  background-color: #f1f5f9;
-  color: #0f172a;
+  background-color: #415a77;
+  color: #e0e1dd;
   border-bottom-left-radius: 8px;
 }
 
@@ -89,26 +93,27 @@ body {
   display: flex;
   gap: 1rem;
   padding: 1.5rem 0;
-  width: 100%;
-  max-width: 1000px;
+  width: 1000px;
   margin: 0 auto;
 }
 
 .chat-input {
   flex: 1;
-  padding: 1.25rem 2rem;
+  padding-top: 20px;
+  padding-left: 20px;
+  padding-right: ;
   border: 1px solid #e2e8f0;
   border-radius: 14px;
   font-size: 1.05rem;
   line-height: 1.6;
-  min-height: 60px;
   transition: all 0.2s ease;
 }
 
 .chat-submit {
+  width: 1;
+  background-color: #f0ebd8;
+  color: black;
   padding: 1rem 2.5rem;
   font-size: 1.05rem;
   border-radius: 14px;
 }
-
-/* Rest of the previous styles remain the same */

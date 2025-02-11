@@ -25,7 +25,6 @@ const App: React.FC = () => {
   const generateAnswer = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (!question.trim()) return;
-    
     setGeneratingAnswer(true);
     const currentQuestion = question;
     setQuestion("");
@@ -43,6 +42,7 @@ const App: React.FC = () => {
       });
       
       const data = await response.json();
+      //console.log(data);
       const aiResponse = data?.candidates?.[0]?.content?.parts?.[0]?.text || "Sorry - Something went wrong. Please try again!";
       
       setChatHistory((prev) => [...prev, { type: "answer", content: aiResponse }]);

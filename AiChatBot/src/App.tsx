@@ -3,7 +3,8 @@ import ReactMarkdown from "react-markdown";
 import "./App.css";
 
 const API_KEY = import.meta.env.VITE_API_GENERATIVE_LANGUAGE_CLIENT;
-const API_URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent?key=${API_KEY}`;
+// const API_URL = `https://generativelanguage.googleapis.com/v1/models/gemini-pro:generateContent?key=${API_KEY}`;
+const API_URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-05-20:generateContent?key=${API_KEY}`;
 
 interface ChatEntry {
   type: "question" | "answer";
@@ -42,7 +43,7 @@ const App: React.FC = () => {
       });
       
       const data = await response.json();
-      //console.log(data);
+      console.log(data);
       const aiResponse = data?.candidates?.[0]?.content?.parts?.[0]?.text || "Sorry - Something went wrong. Please try again!";
       
       setChatHistory((prev) => [...prev, { type: "answer", content: aiResponse }]);

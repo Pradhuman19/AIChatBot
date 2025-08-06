@@ -57,7 +57,7 @@ const App: React.FC = () => {
   return (
     <div className="app-container">
       <header className="app-header">
-        <h1>AI ChatBot</h1>
+        <h1>AI ChatBot by Pradhuman Gupta</h1>
       </header>
       <div ref={chatContainerRef} className="chat-container">
         {chatHistory.length === 0 ? (
